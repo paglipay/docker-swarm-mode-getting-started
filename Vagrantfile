@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
     end
 
     # Workers
-    (1..2).each do |number|
+    (1..1).each do |number|
         config.vm.define "w#{number}" do |node|
             node.vm.network "private_network", ip: "192.168.99.21#{number}"
             node.vm.hostname = "w#{number}"
