@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  jenkinsci:
+    image: jenkins/jenkins:lts
+    environment:
+      EMAIL_SENDER: "paglipay@gmail.com"
+    volumes:
+      - "/mnt/jenkins/jenkins_home:/var/jenkins_home"
+    ports:
+      - "8080:8080"
+

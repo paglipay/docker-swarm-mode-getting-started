@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  naemon:
+    image: paglipay/naemon
+    environment:
+      EMAIL_SENDER: "paglipay@gmail.com"
+    volumes:
+      - "/mnt/naemon:/etc/naemon"
+    ports:
+      - "8088:80"
+
